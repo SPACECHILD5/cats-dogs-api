@@ -30,7 +30,7 @@ export async function GET(req: Request) {
     {
       headers: {
         ...corsHeaders(),
-        "Cache-Control": "public, s-maxage=600, stale-white-revalidate=86400",
+        "Cache-Control": "public, s-maxage=3600, stale-white-revalidate=86400",
       },
     }
   );
