@@ -28,7 +28,10 @@ export async function GET(req: Request) {
       itmes: pool,
     },
     {
-      headers: { ...corsHeaders(), "Cache-Control": "public, max-age=60" },
+      headers: {
+        ...corsHeaders(),
+        "Cache-Control": "public, s-maxage=600, stale-white-revalidate=86400",
+      },
     }
   );
 }
